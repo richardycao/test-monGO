@@ -1,10 +1,11 @@
 image:
   file: .gitpod.Dockerfile
 tasks:
-  - name: Install Go libraries
+  - name: Set up Mongo
     # env:
     #   GOOGLE_APPLICATION_CREDENTIAL: /workspace/test-monGO/golang-test-6a3ef-firebase-adminsdk-qft99-eb4bf4138e.json
-    command: sh ./scripts/install-go-libs.sh
+    command: mkdir -p /workspace/data && mongod --dbpath /workspace/data
+    # sh ./scripts/install-go-libs.sh
 ports:
   - port: 8080
     onOpen: open-preview
