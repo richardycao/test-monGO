@@ -3,7 +3,8 @@ tasks:
     env:
       GOOGLE_APPLICATION_CREDENTIAL: /workspace/test-monGO/golang-test-6a3ef-firebase-adminsdk-qft99-eb4bf4138e.json
     command: 
-      go get -u github.com/gorilla/mux
+      go get -u github.com/gorilla/mux && \
+      go get go.mongodb.org/mongo-driver/mongo
 ports:
   - port: 8080
     onOpen: open-preview

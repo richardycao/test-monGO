@@ -10,7 +10,7 @@ import (
 
 func main() {
 	router := mux.NewRouter()
-	const port string = ":8000"
+	const port string = ":8080"
 	router.HandleFunc("/", func(response http.ResponseWriter, request *http.Request) {
 		fmt.Fprintln(response, "Works so far.")
 	})
