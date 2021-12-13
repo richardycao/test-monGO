@@ -3,8 +3,8 @@
 
 FROM gitpod/workspace-mongodb
 
-RUN go get -u github.com/gorilla/mux && \
-    go get go.mongodb.org/mongo-driver/mongo
+RUN go get -u github.com/gorilla/mux
+RUN go get go.mongodb.org/mongo-driver/mongo
 
 # RUN mkdir -p /tmp/mongodb && \
 #     cd /tmp/mongodb && \
